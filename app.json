@@ -1,0 +1,28 @@
+{
+  "id": "c6104620-186a-421f-8102-d2963629955f",
+  "name": "SD Seminar",
+  "publisher": "D. E. Veloper",
+  "version": "1.0.0.0",
+  "brief": "Seminar Management Solution",
+  "description": "This is my awesome Seminar Management Solution - Buy Me !",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "./Images/download.png",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "14.0.0.0",
+  "application": "14.0.0.0",
+  "features": ["TranslationFile"],
+  "target": "Internal",
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 50149
+    }
+  ],
+  "contextSensitiveHelpUrl": "https://SDSeminar.com/help/",
+  "showMyCode": true,
+  "runtime": "3.2"
+}
