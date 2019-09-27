@@ -7,15 +7,14 @@ Import-Module 'C:\Program Files (x86)\Microsoft Dynamics 365 Business Central\14
 # Export objects from database
 Export-NAVApplicationObject -DatabaseServer 'localhost' -DatabaseName 'Demo Database BC (14-0)' `
                             -Filter 'Type=Page;Id=20..21' `
-                            -Path 'c:\temp\Al-Conversion\Objects.txt' `
-                            -Username 'Admin' -Password 'Passw0rd' `
+                            -Path 'c:\temp\Al\Objects.txt' `
                             -ExportToNewSyntax
 
 # Create deltafiles to make table extensions and page extensions
 # Export object files as text from the development environment 
 # Export both standard objects and changed objects
-Compare-NAVApplicationObject -OriginalPath "C:\Temp\AL\Objects_Standard.txt" `
-                            -ModifiedPath "C:\Temp\AL\Objects_Changed.txt" `
+Compare-NAVApplicationObject -OriginalPath "C:\Temp\AL\Standard\Pag21.txt" `
+                            -ModifiedPath "C:\Temp\AL\Changed\Page21_Changed.txt" `
                             -DeltaPath "C:\Temp\AL\AL" `
                             -ExportToNewSyntax
 

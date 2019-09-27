@@ -3,6 +3,7 @@ table 50100 "CSD Seminar Setup"
 // Chapter 5 - Lab 3-1
 {
     Caption = 'Seminar Setup';
+    
 
     fields
     {
