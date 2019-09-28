@@ -4,7 +4,7 @@ page 50100 "CSD Seminar Setup"
 {
     PageType = Card;
     SourceTable = "CSD Seminar Setup";
-    Caption='Seminar Setup';
+    Caption = 'Seminar Setup';
     InsertAllowed = false;
     DeleteAllowed = false;
     UsageCategory = Administration;
@@ -15,24 +15,50 @@ page 50100 "CSD Seminar Setup"
         {
             group(Numbering)
             {
-                field("Seminar Nos.";"Seminar Nos.")
+                field("Seminar Nos."; "Seminar Nos.")
                 {
                 }
-                field("Seminar Registration Nos.";"Seminar Registration Nos.")
+                field("Seminar Registration Nos."; "Seminar Registration Nos.")
                 {
                 }
-                field("Posted Seminar Reg. Nos.";"Posted Seminar Reg. Nos.")
+                field("Posted Seminar Reg. Nos."; "Posted Seminar Reg. Nos.")
                 {
                 }
             }
         }
     }
 
-trigger OnOpenPage();
-begin
-    if not get then begin
-        init;
-        insert;
+    actions
+    {
+        area(Processing)
+        {
+            action(ImportSoap)
+            {
+                ApplicationArea = All;
+                Caption = 'Import Currencies Soap';
+                RunObject = codeunit "CSD Import FloatRate Soap";
+                Image = ImportCodes;
+                Promoted = true;
+                PromotedIsBig = true;
+                PromotedOnly = true;
+            }
+            action(ImportRest)
+            {
+                ApplicationArea = All;
+                Caption = 'Import Currencies Rest';
+                RunObject = codeunit "CSD Import FloatRate Rest";
+                Image = ImportCodes;
+                Promoted = true;
+                PromotedIsBig = true;
+                PromotedOnly = true;
+            }
+        }
+    }
+    trigger OnOpenPage();
+    begin
+        if not get then begin
+            init;
+            insert;
+        end;
     end;
-end;
 }

@@ -4,7 +4,7 @@ codeunit 50101 "CSD Seminar-Post (Yes/No)"
     //   Chapter 7 - Lab 5-2
     //     - Created new codeunit
 
-    TableNo = 50110;
+    TableNo = "CSD Seminar Reg. Header";
 
     trigger OnRun();
     begin

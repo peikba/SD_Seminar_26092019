@@ -23,6 +23,6 @@
     }
   ],
   "contextSensitiveHelpUrl": "https://SDSeminar.com/help/",
-  "showMyCode": true,
+  "showMyCode": false,
   "runtime": "3.2"
 }
